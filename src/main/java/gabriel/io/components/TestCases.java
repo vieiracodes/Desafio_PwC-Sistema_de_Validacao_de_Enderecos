@@ -47,9 +47,9 @@ public class TestCases {
         int i = 0;
         for (String[] result : test) {
             output[i] = "\nEndereço Original:\n" +
-                    result[0] +
-                    "\nEndereço separado (Nome/número):\n" +
-                    result[1];
+                result[0] +
+                "\nEndereço separado (Nome/número):\n" +
+                result[1];
             i++;
         }
 
