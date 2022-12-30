@@ -18,11 +18,11 @@ public class Main {
 
         while(repeat){
             int choice = JOptionPane.showOptionDialog(null,
-                    "Escolha uma opção:",
-                    "Validador de endereço",
-                    JOptionPane.YES_NO_OPTION,
-                    JOptionPane.QUESTION_MESSAGE,
-                    null, options, options[2]
+                "Escolha uma opção:",
+                "Validador de endereço",
+                JOptionPane.YES_NO_OPTION,
+                JOptionPane.QUESTION_MESSAGE,
+                null, options, options[2]
             );
             switch (choice) {
                 case 0 -> TestCases.testAll();
@@ -36,12 +36,12 @@ public class Main {
         String address = JOptionPane.showInputDialog("Digite um endereço");
         String[] formattedAddress = AddressValidator.validate(address);
         JOptionPane.showMessageDialog(
-                null,
-                "Endereço: " + formattedAddress[0]
-                        + "\nNúmero: "
-                        + formattedAddress[1]
-                        + "\n\nSaída sem formatação:\n"
-                        + Arrays.toString(formattedAddress)
+            null,
+            "Endereço: " + formattedAddress[0]
+            + "\nNúmero: "
+            + formattedAddress[1]
+            + "\n\nSaída sem formatação:\n"
+            + Arrays.toString(formattedAddress)
         );
     }
 }
