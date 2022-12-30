@@ -44,13 +44,16 @@ public class TestCases {
     //Cria uma formatação para exibir os resultados
     private static String[] resultsConversion(String[][] test){
         String[] output = new String[9];
-        for (int i = 0; i < 9; i++) {
+        int i = 0;
+        for (String[] result : test) {
             output[i] = "\nEndereço Original:\n" +
-                    test[i][0] +
+                    result[0] +
                     "\nEndereço separado (Nome/número):\n" +
-                    test[i][1];
+                    result[1];
+            i++;
         }
 
         return output;
     }
 }
+
