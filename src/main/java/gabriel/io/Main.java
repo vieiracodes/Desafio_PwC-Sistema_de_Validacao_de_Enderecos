@@ -35,14 +35,22 @@ public class Main {
     private static void enterAddress(){
         String address = JOptionPane.showInputDialog("Digite um endereço");
         String[] formattedAddress = AddressValidator.validate(address);
-        JOptionPane.showMessageDialog(
-            null,
-            "Endereço: " + formattedAddress[0]
-            + "\nNúmero: "
-            + formattedAddress[1]
-            + "\n\nSaída sem formatação:\n"
-            + Arrays.toString(formattedAddress)
-        );
+        if (formattedAddress.length == 2){
+            JOptionPane.showMessageDialog(
+        null,
+        "Endereço: " + formattedAddress[0]
+                + "\nNúmero: "
+                + formattedAddress[1]
+                + "\n\nSaída sem formatação:\n"
+                + Arrays.toString(formattedAddress)
+            );
+        } else {
+            JOptionPane.showMessageDialog(
+                null,
+                formattedAddress[0]
+            );
+        }
+
     }
 }
 
